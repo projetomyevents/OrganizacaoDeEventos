@@ -1,0 +1,5 @@
+Organização de Eventos
+
+Site que permite ao usuário cadastrado criar um evento/festa. Definindo regras (Ex: idade mínima), restrições (Ex: traje da festa), data, local, preço (se necessário). Permitir ao usuário indicar se o evento se dará através de venda de ingressos, convites privados, ou aberto ao público.
+
+Enviar automaticamente email/mensagem de texto possibilitando ao convidado confirmar ou não a presença. O evento terá uma página contendo as informações gerais do mesmo, inclusive presenças confirmadas.
