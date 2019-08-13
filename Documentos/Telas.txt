@@ -1,17 +1,17 @@
-MyEvent.
+MyEvent
 
-P·gina inicial contendo uma descriÁ„o do site (Gustavo), login e opÁ„o para criar o evento.
+P√°gina inicial contendo uma descri√ß√£o do site (Gustavo), login e op√ß√£o para criar o evento.
 
-Tela de cadastro: Nome, sobrenome, email (utilizando comboBox), CPF (fazer controle para n„o ter repetiÁ„o), telefone, senha e confirmaÁ„o.
+Tela de cadastro: Nome, sobrenome, email (utilizando comboBox), CPF (fazer controle para n√£o ter repeti√ß√£o), telefone, senha e confirma√ß√£o.
 
 Tela de login: Email e senha.
 
-Cadastro de eventos: verificar cadastro de usu·rio;
-Nome do evento, Data, tipo de evento, local, regra, preÁo (opcional), descriÁ„o do evento, respons·veis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites).
+Cadastro de eventos: verificar cadastro de usu√°rio;
+Nome do evento, Data, tipo de evento, local, regra, pre√ßo (opcional), descri√ß√£o do evento, respons√°veis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites).
 
 Tela de envio de convite: informar nome e email da pessoa (preencher todos os emails antes de enviar).
-	Conte˙do do email: Nome do site, nome do convidade, mensagem do convite, link para vis„o geral do evento, 	confirmando presenÁa, usu·rio recebe novo link.
+	Conte√∫do do email: Nome do site, nome do convidade, mensagem do convite, link para vis√£o geral do evento, 	confirmando presen√ßa, usu√°rio recebe novo link.
 
-Vis„o geral do evento: Nome do evento, Data, tipo de evento, local, regra, preÁo (opcional), descriÁ„o do evento, respons·veis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites), lista de convidados confirmados.
+Vis√£o geral do evento: Nome do evento, Data, tipo de evento, local, regra, pre√ßo (opcional), descri√ß√£o do evento, respons√°veis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites), lista de convidados confirmados.
 
-Tela MyEvents: listar os eventos do usu·rio.
+Tela MyEvents: listar os eventos do usu√°rio.
