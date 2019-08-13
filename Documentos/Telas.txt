@@ -1,0 +1,17 @@
+MyEvent.
+
+Página inicial contendo uma descrição do site (Gustavo), login e opção para criar o evento.
+
+Tela de cadastro: Nome, sobrenome, email (utilizando comboBox), CPF (fazer controle para não ter repetição), telefone, senha e confirmação.
+
+Tela de login: Email e senha.
+
+Cadastro de eventos: verificar cadastro de usuário;
+Nome do evento, Data, tipo de evento, local, regra, preço (opcional), descrição do evento, responsáveis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites).
+
+Tela de envio de convite: informar nome e email da pessoa (preencher todos os emails antes de enviar).
+	Conteúdo do email: Nome do site, nome do convidade, mensagem do convite, link para visão geral do evento, 	confirmando presença, usuário recebe novo link.
+
+Visão geral do evento: Nome do evento, Data, tipo de evento, local, regra, preço (opcional), descrição do evento, responsáveis (pode ser mais de um), imagem (opcional), cronograma, capacidade do evento (limite de convites), lista de convidados confirmados.
+
+Tela MyEvents: listar os eventos do usuário.
