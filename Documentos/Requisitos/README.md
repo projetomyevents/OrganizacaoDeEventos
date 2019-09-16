@@ -68,7 +68,7 @@ Na finalização do cadastro/login o sistema deve redirecionar o usuário autent
 
 **RF016: Criação de um evento** - *Gustavo*
 
-A criação de um evento só poderá ser executada por usuários autenticados. Na execução da criação do evento o usuário deverá informar o nome, a data (dia, mês, ano), o local (estado, cidade, bairro, rua, número (opcional), complemento (opcional)), o preço de entrada (opcional), a idade mínima permitida (opcional), o estilo de traje (opcional), uma descrição, uma imagem ilustrativa do evento (opcional) e construir um cronograma com pelo menos a hora de início e término do evento.
+A criação de um evento só poderá ser executada por usuários autenticados. Na execução da criação do evento o usuário deverá informar o nome, a data (dia, mês, ano), o local (estado, cidade, bairro, rua, número (opcional), complemento (opcional)), o preço de entrada (opcional), o limite de acompanhantes por convidado, a idade mínima permitida (opcional), o estilo de traje (opcional), uma descrição, uma imagem ilustrativa do evento (opcional) e construir um cronograma com pelo menos a hora de início e término do evento.
 
 **RF017: Preço de entrada do evento** - *Gustavo*
 Na execução da criação do evento o usuário pode definir um valor monetário ou um valor diverso, e.g. 1kg de arroz, 100 litros de água etc.
@@ -83,11 +83,11 @@ Na finalização da criação do evento o sistema deve redirecionar o usuário a
 
 **RF020: Cadastro de convidados** - *Matheus*
 
-Na execução do cadastro de convidados o usuário deverá informar o nome, o email de cada convidado e o número de acompanhantes, este email deve ser valido.
+Na execução do cadastro de convidados o usuário deverá informar o nome, o email de cada convidado e poderá modificar o limite de acompanhantes ou deixar o padrão informado no cadastro do evento, este email deve ser valido.
 
 **RF021: Confirmação de Presença** - *Matheus*
 
-Ao usuário clicar no link de confirmação de presença ele será redirecionado à pagina de lista de convidados do evento com o seu nome destacado e duas opções ao lado, confirmar e recusar, ao clicar em qualquer uma o seu link é desativado. Nesta página também haverá um link para a página do evento.
+Ao utilizar o link de confirmação de presença pela primeira vez, o usuário terá duas opções: confirmar ou recusar. Ao ter sua presença confirmada, o usuário pode modificar o número de acompanhantes confirmados a qualquer momento.
 
 **RF022: Envio de convites** -*Matheus*
 
@@ -95,15 +95,15 @@ Na finalização do cadastro de convidados o sistema deve enviar os convites par
 
 **RF023: Link de confirmação de presença** - *Ademir*
 
-O link de confirmação deve ser único para cada convidado, e deve ser desativado apenas quando o convidado ao qual o link está vinculado confirmar ou recusar sua presença no evento.
+O link de confirmação deve ser único para cada convidado, e deve redirecionar o usuário para a página de lista de convidados e terá seu nome destacado com algumas opções disponíveis, como, confirmar ou recusar presença e modificar o número de acompanhantes confirmados, caso esteja confirmada a sua presença. Este link ficará ativado até a data de início do evento.
 
 **RF024: Conteúdo do email de confirmação de presença** - *Ademir*
 
-O email de confirmação de presença deve conter, o nome do site, o nome e email do organizador do evento, a descrição do evento, um link para a página do evento, uma mensagem convidando destinatário e o link único de confirmação de presença.
+O email de confirmação de presença deve conter, o nome do site, o nome e email do organizador do evento, um link para a página do evento, uma mensagem convidando destinatário e o link único de confirmação de presença. Este email deve conter também uma mensagem de aviso, informando que o link poderá ser acessado até a data de início do evento.
 
 **RF025: Conteúdo do email de presença confirmada** - *Ademir*
 
-Quando uma presença é confirmada deve ser enviado um email para o convidado contendo, o nome do site, uma mensagem para deixar claro que a sua presença foi confirmada e um link para a página do evento.
+Quando uma presença é confirmada deve ser enviado um email para o convidado contendo, o nome do site, uma mensagem para deixar claro que a sua presença foi confirmada, outra mensagem informando que o usuário agora pode modificar o número de convidados confirmados até a data de início do evento e um link para a página do evento.
 
 **RF026: Conteúdo do email de cancelamento de evento** - *Ademir*
 
