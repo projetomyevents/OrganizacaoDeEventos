@@ -1,4 +1,4 @@
-##### Requisitos do projeto Organização de Eventos, v1.0.4
+##### Requisitos do projeto Organização de Eventos, v1.0.5
 
 # Requisitos Funcionais
 
@@ -152,7 +152,6 @@ Todos os campos de email do sistema devem oferecer sugestões de provedores de e
 **RF037: Impressão da lista de convidados** – *Gustavo*
 
 Na página da lista de convidados deve ter uma opção para realizar a impressão da lista com os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
-
 
 # Requisitos Não Funcionais
 
