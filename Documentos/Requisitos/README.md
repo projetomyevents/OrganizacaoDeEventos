@@ -141,6 +141,18 @@ Haverá um tempo limite para que os convidados possam confirmar sua presença no
 
 O sistema deve permitir que organizador do evento anexe arquivos durante a criação do evento.
 
+**RF035: Verificação de email da conta de usuário** – *Ademir, Gustavo, Matheus*
+
+Na execução do cadastro o sistema deve enviar um email de verificação com um link para confirmar que o email pertence a pessoa. Ao seguir o link a conta do usuário será ativada.
+
+**RF036: Sugestões de provedores de email** – *Ademir, Gustavo*
+
+Todos os campos de email do sistema devem oferecer sugestões de provedores de email. Os provedores devem ser sugeridos quando o usuário digitar @.
+
+**RF037: Impressão da lista de convidados** – *Gustavo*
+
+Na página da lista de convidados deve ter uma opção para realizar a impressão da lista com os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
+
 
 # Requisitos Não Funcionais
 
