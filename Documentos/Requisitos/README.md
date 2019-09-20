@@ -4,166 +4,205 @@
 
 **RF001: Cabeçalho** - *Ademir*
 
-O site deve ter um cabeçalho que estará fixado no topo da página. Este cabeçalho deve conter elementos para a navegação e deve persistir por todo o site.
+O sistema deve ter um cabeçalho fixado no topo de todas as páginas do site. Este cabeçalho deve permitir o acesso as seguintes páginas:
+- Página inicial;
+- Página de autenticação;
+- Página de lista de eventos;
+- Página de criação de evento.
 
-**RF002: Estado da autenticação** - *Ademir*
+Além de permitir que o usuário desfaça sua autenticação pelo cabeçalho.
 
-O cabeçalho deve conter um elemento para a indicação do estado da autenticação do usuário contendo um link com as seguintes ações:
-- Usuário não autenticado: Redirecionar o usuário para a página de autenticação.
-- Usuário autenticado: Desfazer a autenticação e retornar o usuário para a página inicial.
+**RF002: Autenticação do usuário** - *Matheus*
 
-**RF003: Link para a página inicial** - *Ademir*
+O sistema deve indicar o estado de autenticação do usuário através do cabeçalho.
+Ao usuário se autenticar o sistema deve redirecioná-lo para a página inicial.
 
-O cabeçalho deve conter um elemento no canto esquerdo contendo o nome do site com um link para a página inicial.
+**RF003: Página inicial** - *Ademir, Gustavo, Matheus, Vinicius*
 
-**RF004: Link para a página de eventos** - *Ademir*
+O sistema deve oferecer uma página inicial contendo um motto e uma descrição do serviço oferecido. Esta página também deve permitir que o usuário crie um evento, caso ele esteja autenticado.
 
-Caso o usuário esteja autenticado o cabeçalho deverá ter um elemento com um link para a página de listagem de eventos.
+**RF004: Cadastro de uma conta de usuário** - *Matheus*
 
-**RF005: Página inicial** - *Todos*
+O sistema deve permitir que o usuário crie uma conta, tendo que informar os seguintes dados em sua criação:
+- Nome;
+- Sobrenome;
+- Senha;
+- Email;
+- CPF;
+- Número de celular.
 
-O site deve ter uma página inicial que deve conter uma frase amigável, uma descrição do serviço oferecido pelo site, e um link para a criação de eventos com as seguintes ações:
-- Usuário não autenticado: Redirecionar o usuário para a página de autenticação.
-- Usuário autenticado: Redirecionar o usuário para a página de criação de eventos.
+**RF005: Email de uma conta de usuário** - *Matheus*
 
-**RF006: Conta de usuário** - *Matheus*
+O sistema deve fazer a validação do email no cadastro e login de usuário, caso o email informado seja inválido, o sistema deve informar o usuário e impedir que o cadastro prossiga até que o erro tenha sido corrigido.
 
-Para que se possa criar um evento, o usuário deverá ter uma conta no site, de modo que haja possibilidade no controle de seus dados. Na criação da conta o usuário deve informar o nome, o sobrenome, uma senha, um email, seu CPF e um número de celular.
+**RF006: CPF de uma conta de usuário** - *Matheus*
 
-**RF007: Senha da conta de usuário** - *Matheus*
+O sistema deve fazer a validação do CPF no cadastro de usuário, caso o CPF informado seja inválido ou não exista, o sistema deve informar o usuário e impedir que o cadastro prossiga até que o erro tenha sido corrigido.
 
-Na execução do cadastro o usuário deve ser obrigado a confirmar sua senha, e caso as senhas sejam diferentes o sistema deve informar o usuário e impedir que o cadastro prossiga até que a correção seja feita.
+**RF007: Número de celular de uma conta de usuário** - *Matheus*
 
-**RF008: Recuperação da senha da conta de usuário** - *Todos*
+O sistema deve fazer a validação do número de celular no cadastro de usuário, caso o número de celular informado seja inválido, o sistema deve informar o usuário e impedir que o cadastro prossiga até que o erro tenha sido corrigido.
 
-O sistema deve permitir que o usuário recupere sua senha em caso de perda.
+**RF008: Máscaras dos dados de uma conta de usuário** - *Matheus*
 
-**RF009: Email da conta de usuário** - *Matheus, Ademir*
+O sistema deve utilizar as seguintes regras em relação as máscaras de dados no cadastro de usuário:
+- Nome: Permitir apenas letras;
+- Sobrenome: Permitir apenas letras;
+- CPF: Permitir apenas números e limitado a 11 dígitos (hífen e pontos serão tratados pelo sistema).
 
-Na execução do cadastro/login o sistema deve fazer a validação do email, e caso não seja um email válido o sistema deve informar o usuário e impedir que o cadastro prossiga até que a correção seja feita.
+**RF009: Máscara de senha de uma conta de usuário** - *Matheus*
 
-**RF010: CPF da conta de usuário** - *Matheus*
+O sistema deve mascarar os dados da senha no cadastro e login de usuário, não permitindo que seus dados fiquem visíveis.
 
-Na execução do cadastro o sistema deve fazer a validação do CPF, e caso não exista o sistema deve informar o usuário e impedir que o cadastro prossiga até que a correção seja feita.
+**RF010: Confirmação de senha** - *Matheus*
 
-**RF011: Celular da conta de usuário** - *Matheus*
+O sistema deve pedir a confirmação da senha no cadastro de usuário, caso as senhas informadas sejam diferentes, o sistema deve informar o usuário e impedir que o cadastro prossiga até que o erro tenha sido corrigido.
 
-Na execução do cadastro o sistema deve fazer a validação do celular, e caso não exista o sistema deve informar o usuário e impedir que o cadastro prossiga até que a correção seja feita.
+**RF011: Controle de contas de usuário** - *Matheus*
 
-**RF012: Máscaras dos dados da conta de usuário** - *Matheus, Ademir*
+O sistema deve verificar se não há conflito entre os dados informados no cadastro de usuário e os dados de contas já existentes, caso contenha conflito, o sistema deve informar o usuário e impedir que o cadastro prossiga até que o erro tenha sido corrigido.
 
-Na execução do cadastro o sistema deve utilizar máscaras apropriadas para os dados nome, sobrenome, CPF e número de celular.
+**RF012: Verificação do email da conta de usuário** – *Ademir, Gustavo, Matheus, Vinicius*
 
-**RF013: Máscara de senha da conta de usuário** - *Matheus*
+O sistema deve enviar um email de verificação para confirmar que o email informado no cadastro de usuário pertence a pessoa. Ao seguir o link enviado a conta do usuário será ativada.
 
-Na execução do cadastro/login o sistema deve mascarar os campos de senha de forma que os dados digitados não fiquem visíveis.
+**RF013: Conteúdo do email de verificação de email** - *Ademir*
 
-**RF014: Controle de contas** - *Matheus*
+O email de verificação de email deve conter:
+- Identificação do site;
+- Mensagem informando que o usuário deve seguir o link para ativar sua conta;
+- Link para confirmar a ativação da conta.
 
-Na execução do cadastro o sistema deve verificar se não há conflito dos dados de email, CPF e celular com dados já existentes no sistema, e caso contenha conflito o sistema deve informar o usuário e impedir que o cadastro prossiga até que a correção seja feita.
+**RF014: Recuperação da senha** - *Ademir, Gustavo, Matheus, Vinicius*
 
-**RF015: Finalização de cadastro/login** - *Matheus*
+O sistema deve permitir que o usuário recupere sua senha, sendo necessário que o usuário siga o link enviado para o seu email. Ao seguir o link enviado ao seu email o usuário pode informar uma nova senha para sua conta.
 
-Na finalização do cadastro/login o sistema deve redirecionar o usuário autenticado para a página inicial.
+**RF015: Criação de um evento** - *Gustavo*
 
-**RF016: Criação de um evento** - *Gustavo*
+O sistema deve permitir a criação de um evento por usuários autenticados. Na criação de um evento o usuário deverá informar os seguintes dados:
+- Nome;
+- Data: dia, mês, ano;
+- Local: estado, cidade, bairro, rua, número (opcional), complemento (opcional);
+- Preço de entrada (opcional);
+- Limite de acompanhantes por convidado (pode ser alterado individualmente);
+- Idade mínima permitida (opcional);
+- Traje (opcional);
+- Descrição;
+- Imagem ilustrativa (opcional);
+- Cronograma;
+- Anexos (opcional).
 
-A criação de um evento só poderá ser executada por usuários autenticados. Na execução da criação do evento o usuário deverá informar o nome, a data (dia, mês, ano), o local (estado, cidade, bairro, rua, número (opcional), complemento (opcional)), o preço de entrada (opcional), o limite de acompanhantes por convidado, a idade mínima permitida (opcional), o estilo de traje (opcional), uma descrição, uma imagem ilustrativa do evento (opcional) e construir um cronograma com pelo menos a hora de início e término do evento.
+Todo evento terá uma lista de convidados que pode ser modificada a qualquer momento pelo usuário dono do evento.
 
-**RF017: Preço de entrada do evento** - *Gustavo*
-Na execução da criação do evento o usuário pode definir um valor monetário ou um valor diverso, e.g. 1kg de arroz, 100 litros de água etc.
+**RF016: Preço de entrada de um evento** - *Gustavo*
 
-**RF018: Máscaras dos dados do evento** - *Gustavo*
+O sistema deve permitir que o usuário defina um valor monetário ou um valor diverso como preço de entrada do seu evento.
 
-Na execução da criação do evento o sistema deve utilizar máscaras apropriadas para os dados nome, local, preço de entrada, idade mínima, estilo de traje e número máximo de convidados.
+**RF017: Máscaras dos dados de um evento** - *Gustavo*
 
-**RF019: Finalização da criação de um evento** - *Gustavo*
+O sistema deve utilizar as seguintes regras em relação as máscaras de dados na criação de um evento:
+- Nome: Permitir apenas letras;
+- Limite de acompanhantes por convidado: Permitir apenas números e limitar de 0 a 128;
+- Idade mínima: Permitir apenas números e limitar de 1 a 128 anos.
 
-Na finalização da criação do evento o sistema deve redirecionar o usuário autenticado para a página de cadastramento de convidados.
+**RF018: Finalização da criação de um evento** - *Gustavo*
 
-**RF020: Cadastro de convidados** - *Matheus*
+Ao finalizar a criação de um evento o sistema deve redirecionar o usuário para a visão geral de seu evento.
 
-Na execução do cadastro de convidados o usuário deverá informar o nome, o email de cada convidado e poderá modificar o limite de acompanhantes ou deixar o padrão informado no cadastro do evento, este email deve ser valido.
+**RF019: Link para visão geral do evento** - *Vinicius*
 
-**RF021: Confirmação de Presença** - *Matheus*
+O sistema deve permitir que qualquer pessoa com o link do evento possa acessar a visão geral do evento. Esse link deve estar disponível para o criador do evento e para todos os convidados através o email enviado para cada um.
 
-Ao utilizar o link de confirmação de presença pela primeira vez, o usuário terá duas opções: confirmar ou recusar. Ao ter sua presença confirmada, o usuário pode modificar o número de acompanhantes confirmados a qualquer momento.
+**RF020: Visão geral de um evento** - *Vinicius*
 
-**RF022: Envio de convites** -*Matheus*
+O sistema deve disponibilizar uma visão geral do evento, onde todos os dados do evento devem estar disponíveis para visualização em uma página. Esta página deve permitir o acesso a lista de convidados.
 
-Na finalização do cadastro de convidados o sistema deve enviar os convites para os emails cadastrados.
+**RF021: Lista de convidados** - *Matheus*
 
-**RF023: Link de confirmação de presença** - *Ademir*
+O sistema deve permitir a visualização da lista de convidados de cada evento. Caso o usuário seja dono do evento ele poderá modificar esta lista, informando os seguintes dados para cada convidado:
+- Nome;
+- Email;
+- Limite de acompanhantes (receberá valor definido na criação do evento caso não modificado).
 
-O link de confirmação deve ser único para cada convidado, e deve redirecionar o usuário para a página de lista de convidados e terá seu nome destacado com algumas opções disponíveis, como, confirmar ou recusar presença e modificar o número de acompanhantes confirmados, caso esteja confirmada a sua presença. Este link ficará ativado até a data de início do evento.
+**RF017: Máscaras dos dados de um convidado** - *Ademir, Gustavo, Matheus, Vinicius*
 
-**RF024: Conteúdo do email de confirmação de presença** - *Ademir*
+O sistema deve utilizar as seguintes regras em relação as máscaras de dados na de cada convidado do evento:
+- Nome: Permitir apenas letras;
+- Limite de acompanhantes: Permitir apenas números e limitar ao limite de acompanhantes do convidado.
 
-O email de confirmação de presença deve conter, o nome do site, o nome e email do organizador do evento, um link para a página do evento, uma mensagem convidando destinatário e o link único de confirmação de presença. Este email deve conter também uma mensagem de aviso, informando que o link poderá ser acessado até a data de início do evento.
+**RF022: Envio de convites** - *Matheus*
 
-**RF025: Conteúdo do email de presença confirmada** - *Ademir*
+O sistema deve enviar um convite por email para cada novo convidado adicionado na lista de convidados do evento.
 
-Quando uma presença é confirmada deve ser enviado um email para o convidado contendo, o nome do site, uma mensagem para deixar claro que a sua presença foi confirmada, outra mensagem informando que o usuário agora pode modificar o número de convidados confirmados até a data de início do evento e um link para a página do evento.
+**RF023: Conteúdo do email de convite** - *Ademir*
 
-**RF026: Conteúdo do email de cancelamento de evento** - *Ademir*
+O email de convite enviado aos convidados adicionados na lista de convidados do evento deve conter:
+- Identificação do site;
+- Nome do usuário dono do evento;
+- Link para visão geral do evento;
+- Mensagem informando o convidado que foi... convidado ao evento;
+- Link para status de presença;
+- Mensagem informando que o link poderá ser acessado até a data de início do evento.
 
-Quando um evento é cancelado um email deve ser enviado para todos os convidados que estão com a presença confirmada ou pendente, neste email deve conter, o nome do site, todos os detalhes do evento, uma mensagem informando que o evento foi cancelado, e, caso o organizador do evento tenha informado, um motivo para o cancelamento.
+**RF024: Link para status de presença** - *Ademir*
 
-**RF027: Lista de eventos** - *Vinicius*
+O sistema deve construir um link único para cada convidado, este link deve redirecionar o convidado para a página de status de presença do evento e poderá ser usado até a data do evento.
 
-Deverá ter uma lista para a apresentação de todos os eventos cadastrados posteriormente pelo usuário, cada evento da lista terá uma área para exibição do nome, descrição, e imagem caso tenha.
+**RF025: Status de presença** - *Matheus*
 
-**RF028: Link para visão geral do evento** - *Vinicius*
+O sistema deve permitir acesso a página de convidados do evento a todo convidado através do link enviado ao seu email, nesta página o convidado pode confirmar ou recusar sua presença no evento. Caso o convidado tenha confirmado sua presença ele/ela poderá informar o número de acompanhantes confirmados além de receber um email.
 
-Ao clicar em determinado evento na lista, o usuário será redirecionado para uma página contendo a visão geral do evento.
+**RF026: Conteúdo do email de presença confirmada** - *Ademir*
 
-**RF029: Visão geral do evento** - *Vinicius*
+O email de presença confirmada enviado aos convidados que confirmaram sua presença no evento deve conter:
+- Identificação do site;
+- Mensagem informando que sua presença foi confirmada no evento;
+- Mensagem informando que o número de convidados confirmados pode ser modificado até a data de início do evento;
+- Link para a visão geral do evento.
 
-O sistema deverá permitir a visão geral do evento, onde deve conter todos os dados do evento, e permitir que os usuários vejam a lista de convidados. Deve haver também um elemento para a realização da edição da lista de convidados.
+**RF027: Cancelamento de um Evento** - *Gustavo*
 
-**RF030: Edição da lista de convidados** - *Vinicius*
+O sistema deve permitir que o usuário cancele um evento, ao confirmar o cancelamento do evento o usuário será redirecionado para a página de lista de eventos e todos os convidados do evento serão notificados do cancelamento do evento por email.
 
-Na página de visão geral do evento o sistema deverá possibilitar ao usuário autenticado e dono do evento a edição da lista de convidados do evento, permitindo que seja adicionado mais convidados.
+**RF028: Conteúdo do email de cancelamento de um evento** - *Ademir*
 
-**RF031: Cancelamento do Evento** - *Gustavo*
+O email de cancelamento de evento enviado aos convidados deve conter:
+- Identificação do site;
+- Link para a visão geral do evento;
+- Mensagem informando que o evento foi cancelado;
+- Motivo pelo qual o evento foi cancelado.
 
-Na página de visão geral do evento o sistema deverá possibilitar ao usuário autenticado e dono do evento o cancelamento do evento, ao cancelar o usuário será redirecionado à lista de eventos. No cancelamento de um evento todos os convidados deverão ser notificados com um email que o evento foi cancelado.
+**RF029: Reenvio automático de convites** - *Turma*
 
-**RF032: Enviar email automaticamente** - *Turma*
+O sistema deve enviar um convite por email toda semana para todos os convidados que estão com seu status de presença pendente.
 
-O sistema deverá enviar um email toda semana para os convidados que estão com sua confirmação de presença pendente.
+**RF030: Lista de eventos** - *Vinicius*
 
-**RF033: Data limite de confirmação de presença** - *Gustavo*
+O sistema deve disponibilizar uma lista com todos os eventos criados pelo usuário como uma página, onde cada evento deve estar resumido em nome, descrição e imagem do mesmo.
 
-Haverá um tempo limite para que os convidados possam confirmar sua presença no evento, caso este tempo limite seja excedido ou o usuário confirma sua presença o sistema deverá desativar o link de confirmação de presença.
+**RF031: Mudança do status de presença** - *Gustavo*
 
-**RF034: Anexos do evento** - *Turma*
+O sistema deve permitir que os convidados modifiquem seu status de presença e acompanhantes confirmados até a data do evento através do link de status de presença.
 
-O sistema deve permitir que organizador do evento anexe arquivos durante a criação do evento.
+**RF032: Sugestões de provedores de email** – *Ademir, Gustavo*
 
-**RF035: Verificação de email da conta de usuário** – *Ademir, Gustavo, Matheus*
+O sistema deve oferecer sugestões de provedores de email em todos os campos de email, estas sugestões devem aparecer apenas quando o usuário digitar @.
 
-Na execução do cadastro o sistema deve enviar um email de verificação com um link para confirmar que o email pertence a pessoa. Ao seguir o link a conta do usuário será ativada.
+**RF033: Impressão da lista de convidados** – *Gustavo*
 
-**RF036: Sugestões de provedores de email** – *Ademir, Gustavo*
-
-Todos os campos de email do sistema devem oferecer sugestões de provedores de email. Os provedores devem ser sugeridos quando o usuário digitar @.
-
-**RF037: Impressão da lista de convidados** – *Gustavo*
-
-Na página da lista de convidados deve ter uma opção para realizar a impressão da lista com os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
+O sistema deve permitir a impressão da lista de convidados confirmados. Nesta lista estarão os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
 
 # Requisitos Não Funcionais
 
 **RNF001: Endereço de email** - *Ademir*
 
-Todos os emails devem ser enviados pelo endereço de email projetomyevents@outlook.com.
+O sistema deve utilizar o endereço de email projetomyevents@outlook.com para o envio de convites.
 
 **RNF002: Design responsivo** - *Ademir*
 
 O sistema deve apresentar uma interface responsiva, se comportando adequadamente independente do dispositivo em que ela será acessada.
 
-**RNF003: Linguagens do sistema** - *Todos*
+**RNF003: Linguagens do sistema** - *Ademir, Gustavo, Matheus, Vinicius*
 
 O sistema deve ser implementado em Java e Typescript, utilizando os frameworks Spring e Angular, respectivamente.
 
