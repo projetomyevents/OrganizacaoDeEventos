@@ -190,6 +190,14 @@ O sistema deve oferecer sugestões de provedores de email em todos os campos de 
 
 O sistema deve permitir a impressão da lista de convidados confirmados. Nesta lista estarão os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
 
+**RF034: Tamanho da imagem ilustrativa** – *Ademir*
+
+O sistema deve impedir que o usuário carregue uma imagem ilustrativa para um evento com tamanho maior que 20mb.
+
+**RF035: Tamanho dos anexos** – *Ademir*
+
+O sistema deve impedir que o usuário carregue anexos para um evento com tamanho maior que 100mb.
+
 # Requisitos Não Funcionais
 
 **RNF001: Endereço de email** - *Ademir*
