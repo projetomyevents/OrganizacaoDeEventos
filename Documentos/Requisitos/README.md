@@ -25,7 +25,6 @@ O sistema deve oferecer uma página inicial contendo um motto e uma descrição 
 
 O sistema deve permitir que o usuário crie uma conta, tendo que informar os seguintes dados em sua criação:
 - Nome;
-- Sobrenome;
 - Senha;
 - Email;
 - CPF;
@@ -47,7 +46,6 @@ O sistema deve fazer a validação do número de celular no cadastro de usuário
 
 O sistema deve utilizar as seguintes regras em relação as máscaras de dados no cadastro de usuário:
 - Nome: Permitir apenas letras;
-- Sobrenome: Permitir apenas letras;
 - CPF: Permitir apenas números e limitado a 11 dígitos (hífen e pontos serão tratados pelo sistema).
 
 **RF009: Máscara de senha de uma conta de usuário** - *Matheus*
@@ -82,7 +80,7 @@ O sistema deve permitir que o usuário recupere sua senha, sendo necessário que
 O sistema deve permitir a criação de um evento por usuários autenticados. Na criação de um evento o usuário deverá informar os seguintes dados:
 - Nome;
 - Data: dia, mês, ano;
-- Local: estado, cidade, bairro, rua, número (opcional), complemento (opcional);
+- Local: cep, estado, cidade, bairro, rua, número (opcional), complemento (opcional);
 - Preço de entrada (opcional);
 - Limite de acompanhantes por convidado (pode ser alterado individualmente);
 - Idade mínima permitida (opcional);
