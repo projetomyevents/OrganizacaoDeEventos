@@ -63,47 +63,59 @@
 
 | **Nome do caso de uso** | Cadastro de evento
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários**
+| **Resumo** | Este caso de uso descreve as ações percorridas por um usuário autenticado para criar um evento.
+| **Pré-condições** | Login de usuário
+| **Pós-condições** | Validação dos dados do cadastro de evento
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Solicitar a criação de um evento.
+| 2. Informar os dados do evento.
+| | 3. Validar os dados do evento.
+| | 4. Criar o evento.
+| | 5. Redirecionar o usuário para a visão geral do evento.
 
 | **Nome do caso de uso** | Validação de dados do cadastro de evento
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários**
+| **Resumo** | Este caso de uso descreve as ações percorridas pelo sistema para validar os dados informados na criação de um evento.
+| **Pré-condições** | Cadastro de evento
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Tentar criar um evento sem dados obrigatórios.
+| | 2. Impedir que o usuário crie o evento caso o mesmo não tenha informado os dados *nome*, *data*, *cep*, *estado*, *cidade*, *bairro*, *rua*, *limite de acompanhantes*, *descrição*, *cronograma*.
+| 1.1. Informar a data do evento.
+| | 2.1. Impedir que o usuário crie o evento caso a data informada seja anterior ao dia atual.
+| 1.2. Carregar uma imagem ilustrativa.
+| | 2.2. Impedir que o usuário crie o evento caso a imagem tenha um tamanho maior que 20mb.
+| 1.3. Carregar os anexos.
+| | 2.3. Impedir que o usuário crie o evento caso os anexos tenham um tamanho maior que 100mb.
+| | 3. Mostrar mensagem informando o usuário do erro.
 
 | **Nome do caso de uso** | Cancelamento de evento
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários**
+| **Resumo** | Este caso de uso descreve as ações percorridas pelo sistema quando o usuário cancela um evento.
+| **Pré-condições** | Login de usuário
+| **Pós-condições** | Confirmação de cancelamento de evento
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Solicitar o cancelamento de um evento.
+| | 2. Requisitar a confirmação de cancelamento do evento.
 
 | **Nome do caso de uso** | Confirmação de cancelamento de evento
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários** | Provedor de email
+| **Resumo** | Este caso de uso descreve as ações percorridas pelo sistema quando o usuário confirma o cancelamento de um evento.
+| **Pré-condições** | Cancelamento de evento
+| **Pós-condições** | Envio de email
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Confirmar o cancelamento do evento.
+| | 2. Enviar um email para todos os convidados confirmados e pendentes informando do cancelamento do evento.
+| | 3. Cancelar o evento.
+| | 4. Redirecionar o usuário à lista de seus eventos.
 
 ---
 
