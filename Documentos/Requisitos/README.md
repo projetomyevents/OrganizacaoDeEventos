@@ -140,7 +140,8 @@ O email de convite enviado aos convidados adicionados na lista de convidados do 
 - Link para visão geral do evento;
 - Mensagem informando o convidado que foi... convidado ao evento;
 - Link para status de presença;
-- Mensagem informando que o link poderá ser acessado até a data de início do evento.
+- Mensagem informando que o link poderá ser acessado até a data de início do evento;
+- Mensagem informando que o número de convidados confirmados pode ser modificado depois de confirmar sua presença até a data de início do evento.
 
 **RF024: Link para status de presença** - *Ademir*
 
@@ -148,21 +149,13 @@ O sistema deve construir um link único para cada convidado, este link deve redi
 
 **RF025: Status de presença** - *Matheus*
 
-O sistema deve permitir acesso a página de convidados do evento a todo convidado através do link enviado ao seu email, nesta página o convidado pode confirmar ou recusar sua presença no evento. Caso o convidado tenha confirmado sua presença ele/ela poderá informar o número de acompanhantes confirmados além de receber um email.
+O sistema deve permitir acesso a página de convidados do evento a todo convidado através do link enviado ao seu email, nesta página o convidado pode confirmar ou recusar sua presença no evento. Caso o convidado tenha confirmado sua presença ele/ela poderá informar o número de acompanhantes confirmados.
 
-**RF026: Conteúdo do email de presença confirmada** - *Ademir*
-
-O email de presença confirmada enviado aos convidados que confirmaram sua presença no evento deve conter:
-- Identificação do site;
-- Mensagem informando que sua presença foi confirmada no evento;
-- Mensagem informando que o número de convidados confirmados pode ser modificado até a data de início do evento;
-- Link para a visão geral do evento.
-
-**RF027: Cancelamento de um Evento** - *Gustavo*
+**RF026: Cancelamento de um Evento** - *Gustavo*
 
 O sistema deve permitir que o usuário cancele um evento, ao confirmar o cancelamento do evento o usuário será redirecionado para a página de lista de eventos e todos os convidados do evento serão notificados do cancelamento do evento por email.
 
-**RF028: Conteúdo do email de cancelamento de um evento** - *Ademir*
+**RF027: Conteúdo do email de cancelamento de um evento** - *Ademir*
 
 O email de cancelamento de evento enviado aos convidados deve conter:
 - Identificação do site;
@@ -170,31 +163,31 @@ O email de cancelamento de evento enviado aos convidados deve conter:
 - Mensagem informando que o evento foi cancelado;
 - Motivo pelo qual o evento foi cancelado.
 
-**RF029: Reenvio automático de convites** - *Turma*
+**RF028: Reenvio automático de convites** - *Turma*
 
 O sistema deve enviar um convite por email toda semana para todos os convidados que estão com seu status de presença pendente.
 
-**RF030: Lista de eventos** - *Vinicius*
+**RF029: Lista de eventos** - *Vinicius*
 
 O sistema deve disponibilizar uma lista com todos os eventos criados pelo usuário como uma página, onde cada evento deve estar resumido em nome, descrição e imagem do mesmo.
 
-**RF031: Mudança do status de presença** - *Gustavo*
+**RF030: Mudança do status de presença** - *Gustavo*
 
 O sistema deve permitir que os convidados modifiquem seu status de presença e acompanhantes confirmados até a data do evento através do link de status de presença.
 
-**RF032: Sugestões de provedores de email** – *Ademir, Gustavo*
+**RF031: Sugestões de provedores de email** – *Ademir, Gustavo*
 
 O sistema deve oferecer sugestões de provedores de email em todos os campos de email, estas sugestões devem aparecer apenas quando o usuário digitar @.
 
-**RF033: Impressão da lista de convidados** – *Gustavo*
+**RF032: Impressão da lista de convidados** – *Gustavo*
 
 O sistema deve permitir a impressão da lista de convidados confirmados. Nesta lista estarão os nomes e número de acompanhantes confirmados de todos os convidados confirmados.
 
-**RF034: Tamanho da imagem ilustrativa** – *Ademir*
+**RF033: Tamanho da imagem ilustrativa** – *Ademir*
 
 O sistema deve impedir que o usuário carregue uma imagem ilustrativa para um evento com tamanho maior que 20mb.
 
-**RF035: Tamanho dos anexos** – *Ademir*
+**RF034: Tamanho dos anexos** – *Ademir*
 
 O sistema deve impedir que o usuário carregue anexos para um evento com tamanho maior que 100mb.
 
