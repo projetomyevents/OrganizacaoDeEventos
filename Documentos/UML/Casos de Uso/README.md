@@ -178,44 +178,56 @@
 
 | **Nome do caso de uso** | Status de presença
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Convidado
+| **Atores secundários** | Provedor de Email
+| **Resumo** | Mostrará as informações do evento ao convidado
+| **Pré-condições** | Envio de email
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Abrir email enviado para o convidado e mostrar os dados do evento
+| 2. Acessar pelo link único enviado no email para a página do evento
+| | 3. O sistema deverá verificar se o link único ainda não passou da data de início do evento
+| 4. Ver as informações completa do evento enviado pelo email
+| | 5. O sistema deverá verificar se o convidado já confirmou ou negou a presença no evento
 
 | **Nome do caso de uso** | Confirmação de presença
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Convidado
+| **Atores secundários**
+| **Resumo** | Confirmará a participação do convidado no evento
+| **Pré-condições** | Status de presença
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Verificar página do evento sem o convidado ainda ter confirmado a participação
+| 2. Confirmar a Presença no Evento
+| | 3. O sistema deverá verificar se o evento ainda não passou da data de início do evento
+| | 4. O sistema deverá registrar no seu banco de dados que o convidado em questão confirmou sua presença no evento
+| | 5. O sistema deverá alterar a exibição da área de visão geral do evento para o convidado com presença confirmada, com as opções de escolher adicionar convidados ou remover a participação no evento
 
 | **Nome do caso de uso** | Declinação de presença
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Convidado
+| **Atores secundários**
+| **Resumo** | Declinará a participação do convidado no evento
+| **Pré-condições** | Status de Presença
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Verificar página do evento sem o convidado ainda ter confirmado a participação
+| 2. Negar a Presença no Evento
+| | 3. O sistema deverá verificar se o evento ainda não passou da data de início do evento
+| | 4. O sistema deverá registrar no seu banco de dados que o convidado em questão negou sua presença no evento
+| | 5. O sistema deverá alterar a exibição da área de visão geral do evento para o convidado com presença declinada, com a opção de escolher participar do evento
 
 | **Nome do caso de uso** | Modificação do número de acompanhantes confirmados
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Convidado
+| **Atores secundários** | Provedor de Email
+| **Resumo** | Adicionar acompanhantes do convidado
+| **Pré-condições** | Confirmação de Presença
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Verificar página do evento com o convidado já confirmado a participação no evento
+| 2. Acessar a página de Acompanhantes do Convidado no Evento
+| | 3. Acessar a página de Acompanhantes do Convidado no Evento
+| 4. O convidado adicionará acompanhantes para participar do evento
+| | 5. O sistema deverá verificar se o evento ainda não passou da data de início do evento
