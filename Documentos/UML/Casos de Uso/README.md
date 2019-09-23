@@ -21,66 +21,81 @@
 
 | **Nome do caso de uso** | Cadastro de usuário
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários**
+| **Resumo** | O caso de uso irá demonstrar o cenário de um cadastro de usuário no sistema.
+| **Pré-condições**
+| **Pós-condições** | Validação dos dados de cadastro de usuário & Verificação de email
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Usuário acessa a página de cadastro da conta.
+| 2. Usuário informa os dados para realizar o cadastro.
+| | 3. Validar os dados.
+| | 4. Sistema envia um email, com um link para realizar a verificação de email da conta do usuário.
 
 ---
 
 | **Nome do caso de uso** | Validação de dados do cadastro de usuário
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal**
+| **Atores secundários**
+| **Resumo** | Esse caso de uso descreve como o sistema validará os dados no momento de cadastro do usuário.
+| **Pré-condições** | Cadastro de usuário
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1.1. Informa o email.
+| | 2.1. Valida o email informado.
+| 1.2. Informa a senha.
+| | 2.2. Valida a senha informada.
+| 1.3 Informa a senha novamente.
+| | 2.3. Valida a confirmação da senha.
+| 1.4. Informa o CPF.
+| | 2.4. Valida o CPF informado.
+| 1.5. Informa o número de celular.
+| | 2.5. Valida o número de celular informado.
+| | 3. Envia o email de verificação.
 
 ---
 
 | **Nome do caso de uso** | Verificação de email
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal**
+| **Atores secundários**
+| **Resumo** | Este caso de uso descreve como o sistema envia o link de verificação de email da conta de usuário.
+| **Pré-condições** | Validação de dados de cadastro de usuário
+| **Pós-condições** | Envio de email
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| | 1. Gera um link para a conta de usuário.
+| | 2. Envia um email com um link para verificação da conta de usuário.
 
 ---
 
 | **Nome do caso de uso** | Login de usuário
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Usuário
+| **Atores secundários** 
+| **Resumo** | O caso de uso irá demonstrar o cenário de um login de usuário no sistema.
+| **Pré-condições** | Cadastro de usuário
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1. Informa os dados da sua conta.
+| | 2. Realiza uma busca no banco de dados pelo respectivo email e senha.
+| | 3. Caso seja uma conta válida, redireciona o usuário para a página principal do sistema.
+| | 4. Caso haja um erro na busca, deve informar que o login não foi bem sucedido.
 
 ---
 
 | **Nome do caso de uso** | Validação de dados do login de usuário
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal**
+| **Atores secundários**
+| **Resumo** | Esse caso de uso descreve como o sistema validará os dados no momento de login do usuário.
+| **Pré-condições** | Login de usuário
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| 1.1. Informa o email.
+| | 2.1. Valida o email.
+| 1.2. Informa o senha.
+| | 2.2. Valida a senha.
 
 ---
 
