@@ -1,6 +1,17 @@
 # Documentação dos Casos de Uso
 
-##### Gustavo
+| **Nome do caso de uso** | Envio de email
+| - | - |
+| **Ator principal** | Ator principal
+| **Atores secundários** | Atores secundários
+| **Resumo** | Resumo
+| **Pré-condições** | Condições
+| **Pós-condições** | Condições
+| **Ações do ator** | **Ações do sistema**
+| Ação do ator
+| | Ação do sistema
+
+---
 
 | **Nome do caso de uso** | Cadastro de usuário
 | - | - |
@@ -13,6 +24,8 @@
 | Ação do ator
 | | Ação do sistema
 
+---
+
 | **Nome do caso de uso** | Validação de dados do cadastro de usuário
 | - | - |
 | **Ator principal** | Ator principal
@@ -23,6 +36,8 @@
 | **Ações do ator** | **Ações do sistema**
 | Ação do ator
 | | Ação do sistema
+
+---
 
 | **Nome do caso de uso** | Verificação de email
 | - | - |
@@ -35,6 +50,8 @@
 | Ação do ator
 | | Ação do sistema
 
+---
+
 | **Nome do caso de uso** | Login de usuário
 | - | - |
 | **Ator principal** | Ator principal
@@ -45,6 +62,8 @@
 | **Ações do ator** | **Ações do sistema**
 | Ação do ator
 | | Ação do sistema
+
+---
 
 | **Nome do caso de uso** | Validação de dados do login de usuário
 | - | - |
@@ -59,8 +78,6 @@
 
 ---
 
-##### Ademir
-
 | **Nome do caso de uso** | Cadastro de evento
 | - | - |
 | **Ator principal** | Usuário
@@ -74,6 +91,8 @@
 | | 3. Validar os dados do evento.
 | | 4. Criar o evento.
 | | 5. Redirecionar o usuário para a visão geral do evento.
+
+---
 
 | **Nome do caso de uso** | Validação de dados do cadastro de evento
 | - | - |
@@ -93,6 +112,8 @@
 | | 2.3. Impedir que o usuário crie o evento caso os anexos tenham um tamanho maior que 100mb.
 | | 3. Mostrar mensagem informando o usuário do erro.
 
+---
+
 | **Nome do caso de uso** | Cancelamento de evento
 | - | - |
 | **Ator principal** | Usuário
@@ -103,6 +124,8 @@
 | **Ações do ator** | **Ações do sistema**
 | 1. Solicitar o cancelamento de um evento.
 | | 2. Requisitar a confirmação de cancelamento do evento.
+
+---
 
 | **Nome do caso de uso** | Confirmação de cancelamento de evento
 | - | - |
@@ -119,115 +142,106 @@
 
 ---
 
-##### Matheus
-
 | **Nome do caso de uso** | Modificação da lista de convidados
 | - | - |
 | **Ator principal** | Usuário
-| **Atores secundários** | Provedor de Email
-| **Resumo** | Este caso de uso descreve as ações do usuário e do sistema no processo de cadastramento de convidados em um evento
-| **Pré-condições** | Caso de uso cadastro de evento
-| **Pós-condições** | Caso de uso validação de dados de convidados / Caso de uso Envio de Email
+| **Atores secundários** | Provedor de email
+| **Resumo** | Este caso de uso descreve as ações do usuário e do sistema no processo de cadastramento de convidados em um evento.
+| **Pré-condições** | Cadastro de evento
+| **Pós-condições** | Validação de dados do convidado & Envio de email
 | **Ações do ator** | **Ações do sistema**
-| 1. Informar nome do convidado
-| 2. Informar email do convidado
-| 3. Modificar o número de acompanhantes permitidos para este convidado, podendo deixar padrão
-| 4. Repetir o cadastramento de mais um usuário, ou concluir o cadastro
-| | 5. Enviar um email, através do provedor, para cada convidado cadastrado com um link para confirmação de presença
+| 1. Informar nome do convidado.
+| 2. Informar email do convidado.
+| 3. Modificar o número de acompanhantes permitidos para este convidado, ou deixar o valor padrão informado na criação do evento.
+| 4. Repetir o processo de cadastramento de convidado (etapas 1, 2 e 3) para mais convidados, ou concluir a modificação na lista de convidados.
+| | 5. Enviar um email de convite, para cada novo convidado cadastrado com um link para o status de presença.
+
+---
 
 | **Nome do caso de uso** | Validação de dados do convidado
 | - | - |
-| **Ator principal** | 
-| **Atores secundários** | 
-| **Resumo** | Este caso de uso descreve como se dá as validações dos dados informados pelo usuário no caso de uso Modificação da lista de convidados
-| **Pré-condições** | Caso de uso Modificação da Lista de Convidados
-| **Pós-condições** | 
+| **Ator principal** | Usuário
+| **Atores secundários**
+| **Resumo** | Este caso de uso descreve como se dá as validações dos dados informados pelo usuário no caso de uso Modificação da lista de convidados.
+| **Pré-condições** | Modificação da lista de convidados
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
 | | 1. No campo referente ao nome do convidado, o sistema deve impedir que haja caracteres especiais e/ou caracteres numéricos.
 | | 2. Retorno de erro no campo nome do convidado, caso tenha sido identificado algum.
 | | 3. No campo referente ao email do convidado, o sistema deverá fazer uma verificação, impedindo o prosseguimento em caso de email inválido.
 | | 4. Retorno de erro no campo email do convidado, caso tenha sido identificado algum.
 
+---
+
 | **Nome do caso de uso** | Recuperação de senha
 | - | - |
 | **Ator principal** | Usuário
-| **Atores secundários** | Provedor de Email
+| **Atores secundários** | Provedor de email
 | **Resumo** | Este caso de uso mostrará a interação do usuário com o sistema no processo de recuperação de senha.
-| **Pré-condições** | Condições
-| **Pós-condições** | Caso de uso Login de usuário / Caso de uso Envio de Email
+| **Pré-condições**
+| **Pós-condições** | Login de usuário & Envio de email
 | **Ações do ator** | **Ações do sistema**
-| 1. Informar o email de seu cadastro
-| 2. Solicitar recuperação de senha
-| | 3. Enviar um email, através do provedor, contendo um link para uma página que permita ao usuário atribuir uma nova senha àquele email
-| 4. Informar nova senha no link que recebido por email
+| 1. Solicitar recuperação de senha.
+| 2. Informar o email da sua conta.
+| | 3. Enviar um email, contendo um link para uma página que permita ao usuário atribuir uma nova senha a conta do usuário com o email informado.
+| 4. Informar nova senha.
+| | 5. Atribuir nova senha a conta do usuário.
 
 ---
-
-##### Vinicius
-
-| **Nome do caso de uso** | Envio de email
-| - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
-| **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
 
 | **Nome do caso de uso** | Status de presença
 | - | - |
 | **Ator principal** | Convidado
-| **Atores secundários** | Provedor de Email
-| **Resumo** | Mostrará as informações do evento ao convidado
+| **Atores secundários** | Provedor de email
+| **Resumo** | Este caso de uso mostrará como o convidado irá alterar o seu status de presença em um evento.
 | **Pré-condições** | Envio de email
 | **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| 1. Abrir email enviado para o convidado e mostrar os dados do evento
-| 2. Acessar pelo link único enviado no email para a página do evento
-| | 3. O sistema deverá verificar se o link único ainda não passou da data de início do evento
-| 4. Ver as informações completa do evento enviado pelo email
-| | 5. O sistema deverá verificar se o convidado já confirmou ou negou a presença no evento
+| 1. Acessar página de status de presença pelo link único enviado ao seu email.
+| | 2. O sistema deverá verificar se o link único ainda não passou da data de início do evento.
+| 3. Confirmar ou recusar a presença no evento, ou ignorar o convite, ou até modificar o número de acompanhantes confirmados caso sua presença esteja confirmada.
+
+---
 
 | **Nome do caso de uso** | Confirmação de presença
 | - | - |
 | **Ator principal** | Convidado
 | **Atores secundários**
-| **Resumo** | Confirmará a participação do convidado no evento
+| **Resumo** | Este caso de uso mostrará as ações tomadas pelo sistema caso um convidado confirme sua presença em um evento.
 | **Pré-condições** | Status de presença
 | **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| 1. Verificar página do evento sem o convidado ainda ter confirmado a participação
-| 2. Confirmar a Presença no Evento
-| | 3. O sistema deverá verificar se o evento ainda não passou da data de início do evento
-| | 4. O sistema deverá registrar no seu banco de dados que o convidado em questão confirmou sua presença no evento
-| | 5. O sistema deverá alterar a exibição da área de visão geral do evento para o convidado com presença confirmada, com as opções de escolher adicionar convidados ou remover a participação no evento
+| 1. Confirmar a presença no evento.
+| | 2. O sistema deverá verificar se o evento não passou da sua data de início.
+| | 3. O sistema deverá registrar no banco de dados que o convidado confirmou sua presença no evento.
+| | 4. O sistema deverá alterar a página de status de presença de forma que permita o convidado a negar a presença e modificar o número de acompanhantes confirmados.
+
+---
 
 | **Nome do caso de uso** | Declinação de presença
 | - | - |
 | **Ator principal** | Convidado
 | **Atores secundários**
-| **Resumo** | Declinará a participação do convidado no evento
-| **Pré-condições** | Status de Presença
+| **Resumo** | Este caso de uso mostrará as ações tomadas pelo sistema caso um convidado negue sua presença em um evento.
+| **Pré-condições** | Status de presença
 | **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| 1. Verificar página do evento sem o convidado ainda ter confirmado a participação
-| 2. Negar a Presença no Evento
-| | 3. O sistema deverá verificar se o evento ainda não passou da data de início do evento
-| | 4. O sistema deverá registrar no seu banco de dados que o convidado em questão negou sua presença no evento
-| | 5. O sistema deverá alterar a exibição da área de visão geral do evento para o convidado com presença declinada, com a opção de escolher participar do evento
+| 1. Negar a presença no evento.
+| | 2. O sistema deverá verificar se o evento ainda não passou da sua data de início.
+| | 3. O sistema deverá registrar no banco de dados que o convidado em questão negou sua presença no evento.
+| | 4. O sistema deverá alterar a página de status de presença de forma que permita o convidado a confirmar a sua presença.
+
+---
 
 | **Nome do caso de uso** | Modificação do número de acompanhantes confirmados
 | - | - |
 | **Ator principal** | Convidado
-| **Atores secundários** | Provedor de Email
-| **Resumo** | Adicionar acompanhantes do convidado
-| **Pré-condições** | Confirmação de Presença
+| **Atores secundários** | Provedor de email
+| **Resumo** | Este caso de uso mostrará como um convidado modificará o número de acompanhantes confirmados em um evento.
+| **Pré-condições** | Confirmação de presença
 | **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| 1. Verificar página do evento com o convidado já confirmado a participação no evento
-| 2. Acessar a página de Acompanhantes do Convidado no Evento
-| | 3. Acessar a página de Acompanhantes do Convidado no Evento
-| 4. O convidado adicionará acompanhantes para participar do evento
-| | 5. O sistema deverá verificar se o evento ainda não passou da data de início do evento
+| 1. Acessar a página de status de presença.
+| | 2. Verificar se o convidado confirmou sua presença.
+| 3. Modificar o número de acompanhantes confirmados.
+| | 4. O sistema deverá verificar se o evento ainda não passou da sua data de início.
