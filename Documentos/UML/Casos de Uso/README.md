@@ -2,14 +2,20 @@
 
 | **Nome do caso de uso** | Envio de email
 | - | - |
-| **Ator principal** | Ator principal
-| **Atores secundários** | Atores secundários
-| **Resumo** | Resumo
-| **Pré-condições** | Condições
-| **Pós-condições** | Condições
+| **Ator principal** | Provedor de email
+| **Atores secundários** | Usuário & Convidado
+| **Resumo** | Este caso de uso descreve quais email serão enviados para cada ator que interage com o sistema.
+| **Pré-condições** | Verificação de email / Confirmação de cancelamento de evento / Modificação da lista de convidados / Recuperação de senha
+| **Pós-condições**
 | **Ações do ator** | **Ações do sistema**
-| Ação do ator
-| | Ação do sistema
+| | 1.1. Gerar um link para validar a conta de usuário.
+| 2.1 Enviar um email para o usuário contendo o link criado para validar a sua conta.
+| | 1.2. Coletar todos os email de todos os convidados confirmados ou pendentes.
+| 2.2. Enviar um email para todos os emails coletados informando que o evento foi cancelado.
+| | 1.3. Coletar todos os email de todos os novos convidados da lista de convidados do evento.
+| 2.3. Enviar um email de convite para todos os emails coletados.
+| | 1.4. Gerar um link para a recuperação de senha da conta de usuário.
+| 2.4. Enviar um email contendo o link criado para a recuperação de sua conta.
 
 ---
 
