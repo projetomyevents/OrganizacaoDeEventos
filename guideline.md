@@ -18,8 +18,8 @@
 
 #### Exemplos
 
-- **feat(RF00X)**: adicionar máscara de email
-- **fix(RF00X)**: corrigir erro na página inicial
+- **feat**: adicionar máscara de email
+- **fix**: corrigir erro na página inicial
 - **style**: adicionar esse botão na cor branca
 - **refactor**: escrever o código da página inicial de forma mais clara
 - **chore**: adicionar essa dependencia
